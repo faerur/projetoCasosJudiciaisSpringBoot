@@ -24,8 +24,8 @@ public class KeycloakSecurityConfig {
 	@Bean
 	public SecurityFilterChain resourceFilterChain(HttpSecurity http) throws Exception {
 	  http.authorizeHttpRequests(auth -> auth.
-	requestMatchers(PathPatternRequestMatcher.pathPattern("/api/casos/**"))
-	 .hasRole("user")
+	requestMatchers(PathPatternRequestMatcher.pathPattern("/api/arquivos/**"))
+	 .hasAnyRole("user", "admin")
 	 .requestMatchers(PathPatternRequestMatcher.pathPattern("/"))
 	 .permitAll()
 	 .anyRequest()
