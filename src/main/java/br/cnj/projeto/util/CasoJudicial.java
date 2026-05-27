@@ -2,7 +2,6 @@ package br.cnj.projeto.util;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class CasoJudicial {
 	private int numero;
 	private String decisao;
