@@ -18,7 +18,7 @@ public class WebSecurityConfig {
 	 auth.inMemoryAuthentication()
 	 .withUser("rafael").roles("USER").password("{noop}123")
 	 .and()
-	 .withUser("admin").roles("ADMIN").password("{noop}123").and().withUser("joao").roles("USER").password("{noop}123");
+	 .withUser("admin").roles("ADMIN").password("{noop}123");
 	}
 	
 	@Bean
@@ -34,6 +34,7 @@ public class WebSecurityConfig {
 	 .anyRequest()
 	 .authenticated())
 	 .httpBasic(Customizer.withDefaults())
+	 .csrf((csrf) -> csrf.disable())
 	 .build();
 	}
 }
