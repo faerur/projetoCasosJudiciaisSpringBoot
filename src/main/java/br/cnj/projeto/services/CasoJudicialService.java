@@ -16,8 +16,8 @@ public class CasoJudicialService {
 	
 	public CasoJudicialService() {
 		casos = new ArrayList<CasoJudicial>(Arrays.asList(new CasoJudicial[] {
-				new CasoJudicial(1, "A", "Caso 1"), new CasoJudicial(2, "I", "Caso 2"), 
-				new CasoJudicial(3, "I", "Caso 3"), new CasoJudicial(4, "A", "Caso 4")
+				new CasoJudicial(1, 'A', "Caso 1"), new CasoJudicial(2, 'I', "Caso 2"), 
+				new CasoJudicial(3, 'I', "Caso 3"), new CasoJudicial(4, 'A', "Caso 4")
 		}));
 	}
 

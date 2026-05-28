@@ -4,10 +4,10 @@ import org.springframework.stereotype.Component;
 
 public class CasoJudicial {
 	private int numero;
-	private String decisao;
+	private char decisao;
 	private String descricao;
 	
-	public CasoJudicial(int numero, String decisao, String descricao) {
+	public CasoJudicial(int numero, char decisao, String descricao) {
 		this.numero = numero;
 		this.decisao = decisao;
 		this.descricao = descricao;
@@ -24,12 +24,12 @@ public class CasoJudicial {
 	}
 
 
-	public String getDecisao() {
+	public char getDecisao() {
 		return decisao;
 	}
 
 
-	public void setDecisao(String decisao) {
+	public void setDecisao(char decisao) {
 		this.decisao = decisao;
 	}
 
