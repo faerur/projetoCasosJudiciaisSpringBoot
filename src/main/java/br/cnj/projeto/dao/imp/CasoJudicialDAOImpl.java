@@ -8,10 +8,12 @@ import br.cnj.projeto.dao.CasoJudicialDAO;
 import br.cnj.projeto.model.CasoJudicial;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 @Repository
+@Transactional
 public class CasoJudicialDAOImpl implements CasoJudicialDAO{
-
+//Para utilizar JPA basta implementar a interface CasoJudicialRepository
 	@PersistenceContext
 	private EntityManager entityManager;
 	
@@ -38,10 +40,10 @@ public class CasoJudicialDAOImpl implements CasoJudicialDAO{
 		
 	}
 
+	@Transactional
 	@Override
 	public void save(CasoJudicial casoJudicial) {
 		entityManager.persist(casoJudicial);
-		
 		
 	}
 
@@ -51,6 +53,7 @@ public class CasoJudicialDAOImpl implements CasoJudicialDAO{
 		
 	}
 
+	@Transactional
 	@Override
 	public void delete(int id) {
 		CasoJudicial caso = entityManager.find(CasoJudicial.class, id);

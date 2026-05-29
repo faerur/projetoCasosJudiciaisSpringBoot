@@ -23,8 +23,7 @@ public class CasoJudicial {
 	}
 
 
-	public CasoJudicial(int numero, char decisao, String descricao) {
-		this.numero = numero;
+	public CasoJudicial(char decisao, String descricao) {
 		this.decisao = decisao;
 		this.descricao = descricao;
 	}
